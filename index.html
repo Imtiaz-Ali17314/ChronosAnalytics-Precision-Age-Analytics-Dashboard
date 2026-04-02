@@ -3,21 +3,126 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Age Calculator App</title>
+    <title>Chronos | Precision Age Analytics</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
-      <div class="calculator">
-        <h1><span>Age Calculator</span> App</h1>
-        <div class="input-box">
-          <input type="date" id="date" />
-          <button onclick="calculateAge()">Calculate</button>
+    <div class="dot-grid"></div>
+    
+    <main class="app-wrapper">
+      <div class="chronos-card">
+        <div class="card-glow"></div>
+        
+        <header class="app-header">
+          <div class="logo-area">
+            <div class="logo-icon"><i class="ph-fill ph-timer"></i></div>
+            <h1>Chronos<span>Analytics</span></h1>
+          </div>
+          <p>Precision time-tracking for your life journey</p>
+        </header>
+
+        <section class="input-section">
+          <div class="input-box">
+            <label for="date"><i class="ph-bold ph-calendar-blank"></i> Select Birth Date</label>
+            <div class="date-wrapper">
+              <input type="date" id="date" />
+            </div>
+          </div>
+          <button id="calculate-btn" onclick="calculateAge()">
+            Analyze Journey
+            <i class="ph-bold ph-lightning"></i>
+          </button>
+        </section>
+
+        <div id="analytics-portal" class="hidden">
+          <div class="primary-analytics">
+            <div class="big-metric">
+              <span id="years-val">00</span>
+              <label>Years</label>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="big-metric">
+              <span id="months-val">00</span>
+              <label>Months</label>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="big-metric">
+              <span id="days-val">00</span>
+              <label>Days</label>
+            </div>
+          </div>
+
+          <div class="secondary-grid">
+            <div class="stat-module">
+              <div class="module-icon"><i class="ph-bold ph-hash"></i></div>
+              <div class="module-content">
+                <span id="total-months">0</span>
+                <label>Total Months</label>
+              </div>
+            </div>
+            <div class="stat-module">
+              <div class="module-icon"><i class="ph-bold ph-planet"></i></div>
+              <div class="module-content">
+                <span id="total-weeks">0</span>
+                <label>Total Weeks</label>
+              </div>
+            </div>
+            <div class="stat-module">
+              <div class="module-icon"><i class="ph-bold ph-sun-dim"></i></div>
+              <div class="module-content">
+                <span id="total-days">0</span>
+                <label>Total Days</label>
+              </div>
+            </div>
+            <div class="stat-module">
+              <div class="module-icon"><i class="ph-bold ph-clock-countdown"></i></div>
+              <div class="module-content">
+                <span id="total-hours">0</span>
+                <label>Total Hours</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="insights-row">
+            <div class="insight-box">
+              <div class="insight-icon zodiac"><i class="ph-bold ph-shooting-star"></i></div>
+              <div class="insight-data">
+                <label>Zodiac Sign</label>
+                <span id="zodiac-val">--</span>
+              </div>
+            </div>
+            <div class="insight-box">
+              <div class="insight-icon birthday"><i class="ph-bold ph-confetti"></i></div>
+              <div class="insight-data">
+                <label>Birthday In</label>
+                <span id="next-birthday-countdown">--</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pro-panel">
+            <div class="pro-tag">Pro Insight</div>
+            <div class="pro-content">
+              <div class="pro-item">
+                <i class="ph-bold ph-calendar-heart"></i>
+                <p>Born on a <span id="birth-day-name">...</span></p>
+              </div>
+              <div class="pro-item">
+                <i class="ph-bold ph-snowflake"></i>
+                <p>You've lived through <span id="leap-years">0</span> Leap Years</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <p class="result"></p>
-        <p class="age-detail"></p>
       </div>
-    </div>
+    </main>
+
     <script src="script.js"></script>
   </body>
 </html>
