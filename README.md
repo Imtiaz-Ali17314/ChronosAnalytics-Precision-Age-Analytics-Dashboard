@@ -117,3 +117,4 @@ To run this application locally, you do not need any compilation or build steps.
 ## 📜 License
 
 This project is open-source and licensed under the **MIT License**. Feel free to use, modify, and distribute it as part of your learning journey or portfolio customization!
+
