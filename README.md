@@ -100,7 +100,7 @@ To run this application locally, you do not need any compilation or build steps.
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/Imtiaz-Ali17314/ChronosAnalytics-Precision-Age-Analytics-Dashboard.git
+   git clone https://github.com/imtiazaly/ChronosAnalytics-Precision-Age-Analytics-Dashboard.git
    cd ChronosAnalytics-Precision-Age-Analytics-Dashboard
    ```
 
